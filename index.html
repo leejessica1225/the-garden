@@ -11,12 +11,24 @@ body{
   display:flex;
   justify-content:center;
   align-items:center;
+  overflow:hidden; /* ✅ 화면 밖으로 나가는 부분 안 보이게 + 스크롤 방지 */
 }
 
 .deck{
   position:relative;
   width:300px;
   height:300px;
+
+  /* ✅ 화면 밖으로 안 나가게 자동 계산 */
+  --cards: 10;
+  --cardW: 150px;
+  --gap: 60px;      /* 네가 원한 간격 */
+  --safePad: 24px;  /* 화면 좌우 여백 */
+
+  --idealSpread: calc(((var(--cards) - 1) / 2) * var(--gap));
+  --maxSpread: calc((100vw - var(--cardW) - (var(--safePad) * 2)) / 2);
+  --spread: clamp(0px, var(--idealSpread), var(--maxSpread));
+  --step: calc(var(--spread) / ((var(--cards) - 1) / 2));
 }
 
 .card{
@@ -53,9 +65,50 @@ body{
 .c3{transition-delay:0.1s;}
 .c4{transition-delay:0.15s;}
 .c5{transition-delay:0.2s;}
-.c6{transitio
+.c6{transition-delay:0.25s;}
+.c7{transition-delay:0.3s;}
+.c8{transition-delay:0.35s;}
+.c9{transition-delay:0.4s;}
+.c10{transition-delay:0.45s;}
 
+/* ✅ 카드 인덱스 지정 (자동 계산용) */
+.c1 {--i:0;}
+.c2 {--i:1;}
+.c3 {--i:2;}
+.c4 {--i:3;}
+.c5 {--i:4;}
+.c6 {--i:5;}
+.c7 {--i:6;}
+.c8 {--i:7;}
+.c9 {--i:8;}
+.c10{--i:9;}
+
+/* ✅ hover spread: 60px 목표로 퍼지되, 화면이 좁으면 자동으로 줄여서 절대 밖으로 안 나감 */
+.deck:hover .card{
+  transform: translate(-50%,-50%)
+    translate(
+      calc((var(--i) - ((var(--cards) - 1) / 2)) * var(--step)),
+      0px
+    );
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="deck">
+  <div class="card c1"></div>
+  <div class="card c2"></div>
+  <div class="card c3"></div>
+  <div class="card c4"></div>
+  <div class="card c5"></div>
+  <div class="card c6"></div>
+  <div class="card c7"></div>
+  <div class="card c8"></div>
+  <div class="card c9"></div>
+  <div class="card c10"></div>
+</div>
 
 </body>
 </html>
-
