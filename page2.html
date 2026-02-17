@@ -49,17 +49,6 @@ body{
 .c9{transform:translate(-50%,-50%) translate(-160px,-160px);}
 .c10{transform:translate(-50%,-50%) translate(-180px,-180px);}
 
-.c1{transition-delay:0s;}
-.c2{transition-delay:0.02s;}
-.c3{transition-delay:0.04s;}
-.c4{transition-delay:0.06s;}
-.c5{transition-delay:0.08s;}
-.c6{transition-delay:0.10s;}
-.c7{transition-delay:0.12s;}
-.c8{transition-delay:0.14s;}
-.c9{transition-delay:0.16s;}
-.c10{transition-delay:0.18s;}
-
 .deck:hover .c1  {transform:translate(-50%,-50%) translate(270px,0);}
 .deck:hover .c2  {transform:translate(-50%,-50%) translate(210px,0);}
 .deck:hover .c3  {transform:translate(-50%,-50%) translate(150px,0);}
@@ -77,17 +66,24 @@ body{
 <body>
 
 <div class="deck">
-  <div class="card c1"></div>
-  <div class="card c2"></div>
-  <div class="card c3"></div>
-  <div class="card c4"></div>
-  <div class="card c5"></div>
-  <div class="card c6"></div>
-  <div class="card c7"></div>
-  <div class="card c8"></div>
-  <div class="card c9"></div>
-  <div class="card c10"></div>
+  <div class="card c1" onclick="goRandom()"></div>
+  <div class="card c2" onclick="goRandom()"></div>
+  <div class="card c3" onclick="goRandom()"></div>
+  <div class="card c4" onclick="goRandom()"></div>
+  <div class="card c5" onclick="goRandom()"></div>
+  <div class="card c6" onclick="goRandom()"></div>
+  <div class="card c7" onclick="goRandom()"></div>
+  <div class="card c8" onclick="goRandom()"></div>
+  <div class="card c9" onclick="goRandom()"></div>
+  <div class="card c10" onclick="goRandom()"></div>
 </div>
+
+<script>
+function goRandom(){
+  var r = Math.floor(Math.random()*10) + 3;
+  window.location.href = "page" + r + ".html";
+}
+</script>
 
 </body>
 </html>
