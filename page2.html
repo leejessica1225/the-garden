@@ -33,9 +33,6 @@ body{
   border-radius:1.17vw;
   transform:translate(-50%,-50%);
   transition:0.5s ease;
-}
-
-.card{
   pointer-events:none;
 }
 
@@ -75,26 +72,48 @@ body{
 <body>
 
 <div class="deck">
-  <div class="card c1" onclick="goRandom()"></div>
-  <div class="card c2" onclick="goRandom()"></div>
-  <div class="card c3" onclick="goRandom()"></div>
-  <div class="card c4" onclick="goRandom()"></div>
-  <div class="card c5" onclick="goRandom()"></div>
-  <div class="card c6" onclick="goRandom()"></div>
-  <div class="card c7" onclick="goRandom()"></div>
-  <div class="card c8" onclick="goRandom()"></div>
-  <div class="card c9" onclick="goRandom()"></div>
-  <div class="card c10" onclick="goRandom()"></div>
+  <div class="card c1"></div>
+  <div class="card c2"></div>
+  <div class="card c3"></div>
+  <div class="card c4"></div>
+  <div class="card c5"></div>
+  <div class="card c6"></div>
+  <div class="card c7"></div>
+  <div class="card c8"></div>
+  <div class="card c9"></div>
+  <div class="card c10"></div>
 </div>
 
 <script>
-function goRandom(){
-  var r = Math.floor(Math.random()*10) + 3;
-  window.location.href = "page" + r + ".html";
+var pages = [
+  "page3.html",
+  "page4.html",
+  "page5.html",
+  "page6.html",
+  "page7.html",
+  "page8.html",
+  "page9.html",
+  "page10.html",
+  "page11.html",
+  "page12.html"
+];
+
+pages.sort(function(){
+  return Math.random() - 0.5;
+});
+
+var cards = document.querySelectorAll(".card");
+
+for(var i=0; i<cards.length; i++){
+  cards[i].dataset.link = pages[i];
+  cards[i].onclick = function(){
+    window.location.href = this.dataset.link;
+  };
 }
 </script>
 
 </body>
 </html>
+
 
 
