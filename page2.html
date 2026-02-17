@@ -6,11 +6,15 @@
 
 body{
   margin:0;
-  height:100vh;
+  min-height:100vh;
   display:flex;
   justify-content:center;
   align-items:center;
-  background: url("bg2.svg") center/cover no-repeat;
+  background-image:url("bg2.svg");
+  background-repeat:no-repeat;
+  background-position:center top;
+  background-size:100% auto;
+  background-color:black;
 }
 
 .deck{
@@ -21,11 +25,11 @@ body{
 
 .card{
   position:absolute;
-  width:150px;
-  height:220px;
+  width:7.8125vw;
+  height:11.458vw;
   left:50%;
   top:50%;
-  border-radius:15px;
+  border-radius:0.781vw;
   transform:translate(-50%,-50%);
   transition:0.5s ease;
 }
@@ -87,4 +91,5 @@ body{
 
 </body>
 </html>
+
 
