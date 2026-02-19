@@ -1,58 +1,69 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-  body{
-    margin:0;
-    height:100vh;
-    overflow:hidden;
-    background:#000;
-  }
-  .deck{
-    position:relative;
-    width:100vw;
-    height:100vh;
-  }
-  .card{
-    position:absolute;
-    left:50%;
-    top:50%;
-    width:10.6vw;
-    height:auto;
-    transform:translate(-50%,-50%);
-    transition:transform 0.6s ease;
-  }
-  .c1{ transform:translate(-50%,-50%) translate(0px,0px); }
-  .c2{ transform:translate(-50%,-50%) translate(-15px,-15px); }
-  .c3{ transform:translate(-50%,-50%) translate(-30px,-30px); }
+body{
+  margin:0;
+  height:100vh;
+  overflow:hidden;
+  background-image:url("bg111.svg");
+  background-repeat:no-repeat;
+  background-position:center;
+  background-size:cover;
+}
 
-  .deck:hover .c1{
-    transform:translate(-50%,-50%) translate(calc(200 * (100vw / 1920)), 0px);
-    transition-delay:0s;
-  }
-  .deck:hover .c2{
-    transform:translate(-50%,-50%) translate(0px, 0px);
-    transition-delay:0.1s;
-  }
-  .deck:hover .c3{
-    transform:translate(-50%,-50%) translate(calc(-200 * (100vw / 1920)), 0px);
-    transition-delay:0.2s;
-  }
+.deck{
+  position:relative;
+  width:100vw;
+  height:100vh;
+}
 
-  @media (max-width: 600px){
-    .card{ width:160px; }
-  }
+.card{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:10.6vw;
+  height:auto;
+  transform:translate(-50%,-50%);
+  transition:transform 0.6s ease;
+}
+
+.c1{ transform:translate(-50%,-50%) translate(0px,0px); }
+.c2{ transform:translate(-50%,-50%) translate(-15px,-15px); }
+.c3{ transform:translate(-50%,-50%) translate(-30px,-30px); }
+
+.deck:hover .c1{
+  transform:translate(-50%,-50%) translate(calc(200 * (100vw / 1920)), 0px);
+  transition-delay:0s;
+}
+
+.deck:hover .c2{
+  transform:translate(-50%,-50%) translate(0px,0px);
+  transition-delay:0.1s;
+}
+
+.deck:hover .c3{
+  transform:translate(-50%,-50%) translate(calc(-200 * (100vw / 1920)), 0px);
+  transition-delay:0.2s;
+}
+
+@media (max-width:600px){
+  .card{ width:160px; }
+}
 </style>
 </head>
 <body>
-  <div class="deck">
-    <img src="card1.svg" class="card c1" alt="">
-    <img src="card2.svg" class="card c2" alt="">
-    <img src="card3.svg" class="card c3" alt="">
-  </div>
+
+<div class="deck">
+  <img src="card1.svg" class="card c1">
+  <img src="card2.svg" class="card c2">
+  <img src="card3.svg" class="card c3">
+</div>
+
 </body>
 </html>
+
 
 
