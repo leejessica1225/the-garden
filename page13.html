@@ -38,14 +38,12 @@ body{
 .card img{
   width:100%;
   display:block;
-  transition:transform 0.3s ease;
+  transition:transform 0.3s cubic-bezier(.2,1.4,.4,1);
 }
 
-/* 처음 겹친 상태 */
 .c1{ transform:translate(-50%,-50%) translate(12px,12px); }
 .c2{ transform:translate(-50%,-50%) translate(-12px,-12px); }
 
-/* 1단계: 펼쳐짐 */
 .wrap:hover .c1{
   transform:translate(-50%,-50%) translate(-10.2708vw,0);
 }
@@ -55,8 +53,8 @@ body{
 }
 
 .wrap:hover .c2 img{
-  transform:translateY(-25px);
-  transition-delay:0.45s;   
+  transform:translateY(-45px);
+  transition-delay:3.45s;
 }
 </style>
 </head>
@@ -64,18 +62,14 @@ body{
 
 <div class="deck">
   <div class="wrap">
-    <div class="card c1">
-      <img src="card22.svg">
-    </div>
-
-    <div class="card c2">
-      <img src="card223.svg">
-    </div>
+    <div class="card c1"><img src="card22.svg"></div>
+    <div class="card c2"><img src="card223.svg"></div>
   </div>
 </div>
 
 </body>
 </html>
+
 
 
 
