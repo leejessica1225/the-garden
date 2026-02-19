@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,6 @@
 body{
   margin:0;
   height:100vh;
-  overflow:hidden;
   background:url("bg111.svg") center/cover no-repeat;
 }
 
@@ -22,51 +21,38 @@ body{
   left:50%;
   top:50%;
   width:10.6vw;
-  height:auto;
   transform:translate(-50%,-50%);
-  transition:transform 0.35s ease;
+  transition:transform 0.45s ease;
 }
 
-.deck:hover .card{
-  transition:transform 0.6s ease;
-}
-
-.c1{ transform:translate(-50%,-50%) translate(0px,0px); }
-.c2{ transform:translate(-50%,-50%) translate(-15px,-15px); }
-.c3{ transform:translate(-50%,-50%) translate(-30px,-30px); }
+.c1{ transform:translate(-50%,-50%) translate(0,0); transition-delay:0.2s; }
+.c2{ transform:translate(-50%,-50%) translate(-15px,-15px); transition-delay:0s; }
+.c3{ transform:translate(-50%,-50%) translate(-30px,-30px); transition-delay:0.1s; }
 
 .deck:hover .c1{
   transform:translate(-50%,-50%) translate(-21.0625vw,0);
-  transition-delay:0.2s;
 }
 
 .deck:hover .c2{
   transform:translate(-50%,-50%) translate(0,0);
-  transition-delay:0s;
 }
 
 .deck:hover .c3{
   transform:translate(-50%,-50%) translate(21.0625vw,0);
-  transition-delay:0.1s;
-}
-
-.deck:not(:hover) .c1,
-.deck:not(:hover) .c2,
-.deck:not(:hover) .c3{
-  transition-delay:0s;
 }
 </style>
 </head>
 <body>
 
 <div class="deck">
-  <img src="card1.svg" class="card c1" alt="">
-  <img src="card2.svg" class="card c2" alt="">
-  <img src="card3.svg" class="card c3" alt="">
+  <img src="card1.svg" class="card c1">
+  <img src="card2.svg" class="card c2">
+  <img src="card3.svg" class="card c3">
 </div>
 
 </body>
 </html>
+
 
 
 
