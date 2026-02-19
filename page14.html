@@ -39,20 +39,21 @@ body{
 .card img{
   width:100%;
   display:block;
+  pointer-events:none;
   transition:transform 0.3s cubic-bezier(.2,1.4,.4,1);
 }
 
-.c1{ 
+.c1{
   transform:translate(-50%,-50%) translate(0,0);
   pointer-events:none;
 }
 
-.c2{ 
+.c2{
   transform:translate(-50%,-50%) translate(-15px,-15px);
   pointer-events:none;
 }
 
-.c3{ 
+.c3{
   transform:translate(-50%,-50%) translate(-30px,-30px);
   pointer-events:none;
 }
@@ -88,14 +89,23 @@ body{
 
 <div class="deck">
   <div class="wrap">
-    <div class="card c1"><img src="card3311.svg"></div>
-    <a href="pageX.html" class="card c2"><img src="card332.svg"></a>
-    <div class="card c3"><img src="card333.svg"></div>
+    <div class="card c1">
+      <img src="card3311.svg">
+    </div>
+
+    <a href="page14_2.html" class="card c2">
+      <img src="card332.svg">
+    </a>
+
+    <div class="card c3">
+      <img src="card333.svg">
+    </div>
   </div>
 </div>
 
 </body>
 </html>
+
 
 
 
