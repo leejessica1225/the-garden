@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{
+  margin:0;
+  height:100vh;
+  overflow:hidden;
+  background:url("bg222.svg") center/cover no-repeat;
+}
+
+.deck{
+  position:relative;
+  width:100vw;
+  height:100vh;
+}
+
+.wrap{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:35vw;
+  height:18vw;
+}
+
+.card{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:10.6vw;
+  height:auto;
+  transform:translate(-50%,-50%);
+  transition:transform 0.45s ease, filter 0.15s ease;
+  cursor:pointer;
+}
+
+.c1{ transform:translate(-50%,-50%) translate(-10px,-10px); }
+.c2{ transform:translate(-50%,-50%) translate(10px,10px); }
+
+.wrap:hover .c1{
+  transform:translate(-50%,-50%) translate(-20.5417vw,0);
+  transition-delay:0.1s;
+}
+
+.wrap:hover .c2{
+  transform:translate(-50%,-50%) translate(20.5417vw,0);
+  transition-delay:0s;
+}
+
+.card:active{
+  filter:brightness(1.08) drop-shadow(0 0 18px rgba(255,255,255,0.45));
+}
+</style>
+</head>
+<body>
+
+<div class="deck">
+  <div class="wrap">
+    <img src="card22.svg" class="card c1">
+    <img src="card223.svg" class="card c2">
+  </div>
+</div>
+
+</body>
+</html>
