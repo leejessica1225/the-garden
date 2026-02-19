@@ -27,32 +27,34 @@ body{
   transition:transform 0.6s ease;
 }
 
-.c1{ transform:translate(-50%,-50%) translate(0px,0px); z-index:1; }
-.c2{ transform:translate(-50%,-50%) translate(-15px,-15px); z-index:2; }
-.c3{ transform:translate(-50%,-50%) translate(-30px,-30px); z-index:3; }
+.c1{ transform:translate(-50%,-50%) translate(0px,0px); }
+.c2{ transform:translate(-50%,-50%) translate(-15px,-15px); }
+.c3{ transform:translate(-50%,-50%) translate(-30px,-30px); }
 
 .deck:hover .c1{
-  transform:translate(-50%,-50%) translate(-10.4167vw, 0px);
+  transform:translate(-50%,-50%) translate(-21.0625vw,0);
   transition-delay:0.2s;
 }
 
 .deck:hover .c2{
-  transform:translate(-50%,-50%) translate(0px, 0px);
+  transform:translate(-50%,-50%) translate(0,0);
   transition-delay:0s;
 }
 
 .deck:hover .c3{
-  transform:translate(-50%,-50%) translate(10.4167vw, 0px);
+  transform:translate(-50%,-50%) translate(21.0625vw,0);
   transition-delay:0.1s;
 }
 </style>
 </head>
 <body>
-  <div class="deck">
-    <img src="card1.svg" class="card c1" alt="">
-    <img src="card2.svg" class="card c2" alt="">
-    <img src="card3.svg" class="card c3" alt="">
-  </div>
+
+<div class="deck">
+  <img src="card1.svg" class="card c1">
+  <img src="card2.svg" class="card c2">
+  <img src="card3.svg" class="card c3">
+</div>
+
 </body>
 </html>
 
