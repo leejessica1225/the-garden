@@ -8,10 +8,7 @@ body{
   margin:0;
   height:100vh;
   overflow:hidden;
-  background-image:url("bg111.svg");
-  background-repeat:no-repeat;
-  background-position:center;
-  background-size:cover;
+  background:url("bg111.svg") center/cover no-repeat;
 }
 
 .deck{
@@ -30,38 +27,32 @@ body{
   transition:transform 0.6s ease;
 }
 
-.c1{ transform:translate(-50%,-50%) translate(0px,0px); }
-.c2{ transform:translate(-50%,-50%) translate(-15px,-15px); }
-.c3{ transform:translate(-50%,-50%) translate(-30px,-30px); }
+.c1{ transform:translate(-50%,-50%) translate(0px,0px); z-index:1; }
+.c2{ transform:translate(-50%,-50%) translate(-15px,-15px); z-index:2; }
+.c3{ transform:translate(-50%,-50%) translate(-30px,-30px); z-index:3; }
 
 .deck:hover .c1{
-  transform:translate(-50%,-50%) translate(calc(200 * (100vw / 1920)), 0px);
-  transition-delay:0s;
-}
-
-.deck:hover .c2{
-  transform:translate(-50%,-50%) translate(0px,0px);
-  transition-delay:0.1s;
-}
-
-.deck:hover .c3{
-  transform:translate(-50%,-50%) translate(calc(-200 * (100vw / 1920)), 0px);
+  transform:translate(-50%,-50%) translate(-10.4167vw, 0px);
   transition-delay:0.2s;
 }
 
-@media (max-width:600px){
-  .card{ width:160px; }
+.deck:hover .c2{
+  transform:translate(-50%,-50%) translate(0px, 0px);
+  transition-delay:0s;
+}
+
+.deck:hover .c3{
+  transform:translate(-50%,-50%) translate(10.4167vw, 0px);
+  transition-delay:0.1s;
 }
 </style>
 </head>
 <body>
-
-<div class="deck">
-  <img src="card1.svg" class="card c1">
-  <img src="card2.svg" class="card c2">
-  <img src="card3.svg" class="card c3">
-</div>
-
+  <div class="deck">
+    <img src="card1.svg" class="card c1" alt="">
+    <img src="card2.svg" class="card c2" alt="">
+    <img src="card3.svg" class="card c3" alt="">
+  </div>
 </body>
 </html>
 
